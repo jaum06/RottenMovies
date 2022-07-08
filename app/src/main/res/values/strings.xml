@@ -8,4 +8,12 @@
     <string name="vote_average_text">75%</string>
     <string name="popular_movie_text">Lo más popular</string>
     <string name="now_playing_text">Películas en cartelera</string>
+    <string name="release_date">Fecha de estreno</string>
+    <string name="genres">Géneros</string>
+    <string name="tagline">Tagline</string>
+    <string name="overview">El príncipe Amleth está a punto de convertirse en hombre pero, en ese momento, su tío asesina brutalmente a su padre y secuestra a la madre del niño. Dos décadas después, Amleth es un vikingo que tiene la misión de salvar a su madre.</string>
+    <string name="Original_Title">Título original</string>
+    <string name="budget">Presupuesto</string>
+    <string name="overview_text">Resúmen</string>
+    <string name="revenue">Ingresos</string>
 </resources>
