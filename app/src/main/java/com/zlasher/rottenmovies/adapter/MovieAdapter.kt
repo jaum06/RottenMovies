@@ -6,14 +6,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.zlasher.rottenmovies.R.layout.movies_view
-import com.zlasher.rottenmovies.databinding.MoviesViewBinding
 import com.zlasher.rottenmovies.detail.MovieDetail
+import com.zlasher.rottenmovies.databinding.MoviesViewBinding
 
-class MovieAdapter(private val movies: List<MovieDetail>) :
+class MovieAdapter(
+    private val movies: List<MovieDetail>,
+    private val onItemClicked: (MovieDetail) -> Unit
+) :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val moviesBinding = MoviesViewBinding.bind(view)
+
 
         fun bind(movie: MovieDetail) {
             with(moviesBinding) {
@@ -38,6 +42,7 @@ class MovieAdapter(private val movies: List<MovieDetail>) :
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         val movie = movies[position]
+        holder.itemView.setOnClickListener { onItemClicked(movies[position]) }
         holder.bind(movie)
     }
 

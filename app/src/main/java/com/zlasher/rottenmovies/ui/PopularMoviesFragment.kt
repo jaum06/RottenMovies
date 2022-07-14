@@ -1,6 +1,7 @@
 package com.zlasher.rottenmovies.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,10 +39,14 @@ class PopularMoviesFragment : Fragment(), RetrofitFun {
     }
 
     private fun initRecyclerView() {
-        adapter = MovieAdapter(moviesList)
+        adapter = MovieAdapter(moviesList, onItemClicked = { onMovieClicked(it) })
         moviesBinding.popularRecycler.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         moviesBinding.popularRecycler.adapter = adapter
+    }
+
+    private fun onMovieClicked(movie: MovieDetail) {
+        Log.d("prueba", "${movie.id}")
     }
 
     private fun searchMovies() {
