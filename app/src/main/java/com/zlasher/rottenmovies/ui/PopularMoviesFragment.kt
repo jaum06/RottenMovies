@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zlasher.rottenmovies.adapter.MovieAdapter
 import com.zlasher.rottenmovies.databinding.FragmentPopularMoviesBinding
@@ -47,6 +48,11 @@ class PopularMoviesFragment : Fragment(), RetrofitFun {
 
     private fun onMovieClicked(movie: MovieDetail) {
         Log.d("prueba", "${movie.id}")
+        findNavController().navigate(
+            ContainerMoviesFragmentDirections.actionContainerMoviesFragmentToDetailMovieFragment(
+                movie
+            )
+        )
     }
 
     private fun searchMovies() {

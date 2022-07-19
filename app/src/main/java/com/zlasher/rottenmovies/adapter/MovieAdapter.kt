@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.zlasher.rottenmovies.R.layout.movies_view
-import com.zlasher.rottenmovies.detail.MovieDetail
 import com.zlasher.rottenmovies.databinding.MoviesViewBinding
+import com.zlasher.rottenmovies.detail.MovieDetail
 
 class MovieAdapter(
     private val movies: List<MovieDetail>,
