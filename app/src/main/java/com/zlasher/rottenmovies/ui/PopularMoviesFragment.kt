@@ -47,7 +47,6 @@ class PopularMoviesFragment : Fragment(), RetrofitFun {
     }
 
     private fun onMovieClicked(movie: MovieDetail) {
-        Log.d("prueba", "${movie.id}")
         findNavController().navigate(
             ContainerMoviesFragmentDirections.actionContainerMoviesFragmentToDetailMovieFragment(
                 movie
